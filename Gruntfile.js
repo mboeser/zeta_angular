@@ -19,6 +19,15 @@ module.exports = function(grunt){
                 ],
                 "dest": "server/public/vendors/"
             },
+            angular: {
+                expand: true,
+                cwd: 'node_modules/angular/',
+                src: [
+                    "angular.min.js",
+                    "angular.min.js.map"
+                ],
+                "dest": "server/public/vendors/"
+            },
             html: {
                 expand: true,
                 cwd: 'client/views/',
