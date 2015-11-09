@@ -10,8 +10,19 @@
     <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" ng-controller="WelcomeController">
         <p class="lead">Hello Zeta</p>
+
+        <input ng-model="note.name" type="text" placeholder="Enter your name">
+        <button ng-click="clickButton(note)" class="btn btn-info">Submit Name</button>
+
+
+        <div ng-repeat="people in nameArray">
+            <div class="col-md-2 well">
+                <p class="lead">{{people.name}}</p>
+
+            </div>
+        </div>
     </div>
 </body>
 </html>
